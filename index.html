@@ -10,7 +10,8 @@
     <link href="./ackbar-sandbox.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
 
-    <script src="node_modules/ackbar-snackbar/dist/index.js"></script>
+    <script src="build/js/ackbar-snackbar-bundle.js"></script>
+    <script src="ackbar-sandbox.js"></script>
 </head>
 <body>
 
@@ -102,63 +103,6 @@
 </div>
 
 <ackbar-snackbar position="bottom left"></ackbar-snackbar>
-
-<script>
-  window.addEventListener('ackbar-snackbar-add', () => {
-    console.log('window got event');
-  })
-  const buttons = document.querySelectorAll('#createButton');
-
-  function handleButtonClick(event) {
-    event.preventDefault();
-    const ackbarSnackbarElement = document.querySelector('ackbar-snackbar');
-    const snackbarMessage = document.querySelector('#message').value;
-    const snackbarButtonText = document.querySelector('#buttonText').value;
-    const snackbarDuration = document.querySelector('#duration').value;
-    const snackbarType = document.querySelector('input[name="auto"]:checked').value;
-    const snackbarSize = document.querySelector('input[name="size"]:checked').value;
-    const snackbarPosition = document.querySelector('#position').value;
-    const snackbarVariant = document.querySelector('#variant').value;
-    const snackbarAnimationName = document.querySelector('#animationName').value;
-    const snackbarAnimationDuration = document.querySelector('#animationDuration').value;
-
-    // console.log('Message:', snackbarMessage);
-    // console.log('Button Text:', snackbarButtonText);
-    // console.log('Duration:', snackbarDuration);
-    // console.log('Type:', snackbarType);
-    // console.log('Size:', snackbarSize);
-    // console.log('Position:', snackbarPosition);
-    // console.log('Variant:', snackbarVariant);
-    // console.log('Animation Name:', snackbarAnimationName);
-    // console.log('Animation Duration:', snackbarAnimationDuration);
-
-    ackbarSnackbarElement.setAttribute('position', snackbarPosition)
-
-    const snackbarOptions = {}
-
-    if (snackbarMessage) snackbarOptions.message = snackbarMessage;
-    if (snackbarAnimationDuration) snackbarOptions.animationDuration = +snackbarAnimationDuration;
-    if (snackbarAnimationName) snackbarOptions.animationName = snackbarAnimationName;
-    if (snackbarDuration) snackbarOptions.duration = +snackbarDuration;
-    if (snackbarButtonText) snackbarOptions.buttonText = snackbarButtonText;
-    if (snackbarSize) snackbarOptions.size = snackbarSize;
-    if (snackbarType) snackbarOptions.type = snackbarType;
-    if (snackbarVariant) snackbarOptions.variant = snackbarVariant;
-
-    console.log('sn', snackbarDuration);
-
-    window.dispatchEvent(new CustomEvent('ackbar-snackbar-add', {
-      bubbles: true,
-      composed: true,
-      detail: snackbarOptions
-    }));
-  }
-
-  buttons.forEach((button) => {
-    button.addEventListener('click', handleButtonClick);
-  });
-
-</script>
 
 </body>
 </html>

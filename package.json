@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "lite-server",
-    "install:dependencies": "npm install"
+    "bundle:js": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/boguz/ackbar-snackbar-sandbox#readme",
   "dependencies": {
-    "ackbar-snackbar": "^0.0.3"
+    "@rollup/plugin-node-resolve": "^11.2.0",
+    "ackbar-snackbar": "^0.0.3",
+    "rollup": "^2.39.0"
   },
   "devDependencies": {
     "lite-server": "^2.6.1"
