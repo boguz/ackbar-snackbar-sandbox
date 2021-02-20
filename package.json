@@ -1,0 +1,26 @@
+{
+  "name": "ackbar-snackbar-sandbox",
+  "version": "1.0.0",
+  "description": "A simple sandbox to try out the different <ackbar-snackbar> options",
+  "main": "index.js",
+  "scripts": {
+    "dev": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boguz/ackbar-snackbar-sandbox.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/boguz/ackbar-snackbar-sandbox/issues"
+  },
+  "homepage": "https://github.com/boguz/ackbar-snackbar-sandbox#readme",
+  "dependencies": {
+    "ackbar-snackbar": "^0.0.3"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
