@@ -20,7 +20,7 @@
   "homepage": "https://github.com/boguz/ackbar-snackbar-sandbox#readme",
   "dependencies": {
     "@rollup/plugin-node-resolve": "^11.2.0",
-    "ackbar-snackbar": "^0.0.6",
+    "ackbar-snackbar": "^0.0.7",
     "rollup": "^2.39.0"
   },
   "devDependencies": {
